@@ -13,13 +13,16 @@
  * Text Domain:       yardsale
 */
 
+define("PLZ_PATH",plugin_dir_path(__FILE__));
+
 //API REST
-require_once plugin_dir_path(__FILE__)."/includes/API/api-registro.php";
-require_once plugin_dir_path(__FILE__)."/includes/API/api-login.php";
+require_once PLZ_PATH."/includes/API/api-registro.php";
+require_once PLZ_PATH."/includes/API/api-login.php";
 
 //Shortcodes
-require_once plugin_dir_path(__FILE__)."/public/shortcode/form-registro.php";
-require_once plugin_dir_path(__FILE__)."/public/shortcode/form-login.php";
+require_once PLZ_PATH."/public/shortcode/form-registro.php";
+require_once PLZ_PATH."/public/shortcode/form-login.php";
+
 
 function plz_plugin_activar(){
     add_role('cliente',"Cliente","read_post");

@@ -2,6 +2,10 @@
 
 function plz_script_login(){
     wp_register_script("plz-login", plugins_url("../assets/js/login.js",__FILE__));
+    wp_localize_script("plz-login","plz",array(
+        "rest_url" => rest_url("plz"),
+        "home_url" => home_url()
+    ));
 }
 
 add_action("wp_enqueue_scripts","plz_script_login");

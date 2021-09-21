@@ -28,7 +28,7 @@ function plz_registro_callback($request){
         "user_login" => $request["name"],
         "user_pass"  => $request["password"],
         "user_email" => $request["email"],
-        "role"       => "editor"
+        "role"       => "cliente"
     );
 
    $user =  wp_insert_user($args);
