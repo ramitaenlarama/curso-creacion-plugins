@@ -29,6 +29,7 @@ function plz_add_register_form(){
                 <div class="signin__submit">
                     <input type="submit" value="Create">
                 </div>
+                <div class="msg"></div>
             </form>
         </div>
     </div>
