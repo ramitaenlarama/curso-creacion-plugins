@@ -13,7 +13,7 @@ function plz_add_register_form(){
     <div class="signin">
         <div class="signin__container">
             <h1 class="sigin__titulo">Register</h1>
-            <form class="signin__form" id="signin">
+            <form class="signin__form" id="signup">
                 <div class="signin__name name--campo">
                     <label for="Name">Name</label>
                     <input name="name" type="text" id="Name">

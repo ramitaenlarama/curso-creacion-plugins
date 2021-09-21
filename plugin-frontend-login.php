@@ -15,6 +15,7 @@
 
 //API REST
 require_once plugin_dir_path(__FILE__)."/includes/API/api-registro.php";
+require_once plugin_dir_path(__FILE__)."/includes/API/api-login.php";
 
 //Shortcodes
 require_once plugin_dir_path(__FILE__)."/public/shortcode/form-registro.php";

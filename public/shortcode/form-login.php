@@ -1,7 +1,13 @@
 <?php 
 
-function plz_add_login_form(){
+function plz_script_login(){
+    wp_register_script("plz-login", plugins_url("../assets/js/login.js",__FILE__));
+}
 
+add_action("wp_enqueue_scripts","plz_script_login");
+
+function plz_add_login_form(){
+    wp_enqueue_script("plz-login");
     $response = '
     <main class="signin">
         <div class="signin__container">
@@ -20,6 +26,7 @@ function plz_add_login_form(){
                 <div class="signin_create-link">
                     <a href="'.home_url("sing-up").'">Sign up</a>
                 </div>
+                <div class="msg"></div>
             </form>
         </div>
     </main>
@@ -27,3 +34,5 @@ function plz_add_login_form(){
 
     return $response;
 }
+
+add_shortcode("plz_login","plz_add_login_form");
