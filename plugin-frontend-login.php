@@ -21,3 +21,14 @@ require_once plugin_dir_path(__FILE__)."/includes/API/api-login.php";
 require_once plugin_dir_path(__FILE__)."/public/shortcode/form-registro.php";
 require_once plugin_dir_path(__FILE__)."/public/shortcode/form-login.php";
 
+function plz_plugin_activar(){
+    add_role('cliente',"Cliente","read_post");
+}
+
+register_activation_hook(__FILE__,"plz_plugin_activar");
+
+function plz_plugin_desactivar(){
+    remove_role("cliente");
+}
+
+register_deactivation_hook(__FILE__,"plz_plugin_desactivar");
