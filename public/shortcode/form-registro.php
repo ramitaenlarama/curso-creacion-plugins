@@ -1,6 +1,13 @@
 <?php 
+function plz_script_registro(){
+    wp_register_script("plz-registro",plugins_url("../assets/js/registro.js",__FILE__));
+}
+
+add_action("wp_enqueue_scripts", "plz_script_registro");
+
 
 function plz_add_register_form(){
+    wp_enqueue_script("plz-registro");
 
     $response = '
     <div class="signin">

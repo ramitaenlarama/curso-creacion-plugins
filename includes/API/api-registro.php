@@ -7,7 +7,7 @@ function plz_api_registro(){
         "plz",
         "registro",
         array(
-            'methods' => 'GET', 
+            'methods' => 'POST', 
             'callback' => 'plz_registro_callback'
         )
         );
