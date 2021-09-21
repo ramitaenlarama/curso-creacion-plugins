@@ -13,9 +13,3 @@
  * Text Domain:       yardsale
 */
 
-
-function plz_test(){
-    echo "<h1>Mi primer plugin</h1>";
-}
-
-add_action("wp_head","plz_test");
