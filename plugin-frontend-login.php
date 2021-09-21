@@ -13,3 +13,4 @@
  * Text Domain:       yardsale
 */
 
+require_once plugin_dir_path(__FILE__)."/public/shortcode/form-registro.php";
