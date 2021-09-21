@@ -8,15 +8,18 @@ window.addEventListener("DOMContentLoaded",function(){
         let datos = new FormData($form);
         let datosParse = new URLSearchParams(datos);
 
-        fetch("http://yardsales.plz/wp-json/plz/login",
+        fetch(`${plz.rest_url}/login`,
         {
             method: "POST",
             body: datosParse
         }
         )
-        .then(res=>res.json())
+        .then(res=>res.text())
         .then(json=>{
             console.log(json)
+            if(json == "false"){
+                window.location.href = plz.home_url
+            }
         })
         .catch(err=>{
             console.log(`Hay un error: ${err}`)
